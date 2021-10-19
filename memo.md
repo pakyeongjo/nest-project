@@ -18,4 +18,10 @@
 14. Service는 비즈니스 로직 구별하는 역할인가보네 이게 구조에 있는거 처음보네
 15. Service에서 함수 이름이랑 Controller 함수 이름은 같을 필요가 없다.
 
+## 2021.10.19
+
+1. Nest CLI의 generate로 controller, class, resource 등을 만들 수 있네. 신기한 인터페이스임
+2. 콘솔에 nest를 입력하면 커맨드가 다 나옴
+3. controller 같은거에 네이밍 컨벤션이 있나 찾아봐야겠다. 얘는 복수형으로 쓰긴 하는데
+4. 컨트롤러를 만드니까 src 아래 디렉토리가 생기고 그 안에 controller.ts가 생기네. 모듈에 import는 자동으로 해줌 (어떻
 
