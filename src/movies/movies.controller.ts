@@ -1,10 +1,16 @@
-import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from '@nestjs/common';
 
 @Controller('movies')
 export class MoviesController {
     @Get()
     getAll() {
         return "This will return all movies";
+    }
+
+    @Get("search")
+    search(@Query("year") searchYear){
+        // return "searching..."
+        return `searching... ${searchYear}`
     }
 
     @Get('/:id')
@@ -32,5 +38,4 @@ export class MoviesController {
             updateData
         }
     }
-
 }

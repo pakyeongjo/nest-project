@@ -31,6 +31,7 @@
 9. id 받을 때 정수나 문자열이 다 됨. 와이?
 10. 아 reloard 안되는거 npm run start:dev나 nest start --watch 하면 되는듯
 11. params 데코레이터를 쓰는데.. 문자열 안에서 변수를 쓰려면 `` 안에 넣어야 먹네 이건 js 문법인가?
+12. Get - Retrieve가 위에 있고 Get - search가 아래에 있으면 서치 어쩌구저쩌구 해도 id로 본다. 윗 라인이 우선순위인가봄?
 
 
 
