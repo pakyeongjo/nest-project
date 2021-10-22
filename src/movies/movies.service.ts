@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { Movie } from './entities/movie.entity';
 
 @Injectable()
@@ -10,12 +10,19 @@ export class MoviesService {
     }
 
     getOne(id: string): Movie{
-        return this.movies.find(movie => movie.id === parseInt(id))
+        // return this.movies.find(movie => movie.id === parseInt(id))
+        const movie =  this.movies.find(movie => movie.id === parseInt(id));
+        if (!movie) {
+            throw new NotFoundException(`Does not exist ${id} movie `);
+        }
+        return movie
     }
 
-    deleteOne(id: string):boolean {
+    deleteOne(id: string) {
+        // this.movies.filter(movie => movie.id !== +id);
+        // return true;
+        this.getOne(id);
         this.movies.filter(movie => movie.id !== +id);
-        return true;
     }
 
     create(movieData){
